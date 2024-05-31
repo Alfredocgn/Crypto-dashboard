@@ -1,6 +1,6 @@
 
 
-import { chartData, chartOptions } from "../../data/LineChartData";
+import { chartData, chartOptions } from "../../data/data";
 import Card from "../Card/Card";
 import LineChart from "../LineChart/LineChart";
 import Navbar from "../Navbar/Navbar";
@@ -8,7 +8,7 @@ import WalletActivity from "../WalletActivity/WalletActivity";
 import BitcoinLogo from '../../assets/Bitcoin-Logo.png';
 import EthereumLogo from '../../assets/Ethereum-Logo.png'
 import LitecoinLogo from '../../assets/Litecoin-Logo.png'
-import { smallChartBTCData, smallChartBTCOptions,smallChartETHData,smallChartETHOptions,smallChartLTCData,smallChartLTCOptions } from '../../data/LineChartData';
+import { smallChartBTCData, smallChartBTCOptions,smallChartETHData,smallChartETHOptions,smallChartLTCData,smallChartLTCOptions } from '../../data/data';
 
 const Dashboard = () => {
 
@@ -21,12 +21,12 @@ const Dashboard = () => {
             <h2 className="text-3xl text-gray-200">Total balance $183,936</h2>
           </div>
           <div className="flex gap-4 ">
-            <Card imageSrc={BitcoinLogo} number={'1.9678'} chartData={smallChartBTCData} chartOptions={smallChartBTCOptions} currency={'BTC'} percentage={'+12.5%'} chartHeight={'6rem'} chartWidth={'10rem'} />
-            <Card imageSrc={EthereumLogo} number={'22.234'} chartData={smallChartETHData} chartOptions={smallChartETHOptions} currency={'ETH'} percentage={'-5.23%'} chartHeight={'6rem'} chartWidth={'10rem'} />
-            <Card imageSrc={LitecoinLogo} number={'380.234'} chartData={smallChartLTCData} chartOptions={smallChartLTCOptions} currency={'LTC'} percentage={'+39.69%'} chartHeight={'6rem'} chartWidth={'10rem'} />
+            <Card imageSrc={BitcoinLogo} number={'1.9678'} chartData={smallChartBTCData} chartOptions={smallChartBTCOptions} currency={'BTC'} percentage={'+12.5%'} size='small' />
+            <Card imageSrc={EthereumLogo} number={'22.234'} chartData={smallChartETHData} chartOptions={smallChartETHOptions} currency={'ETH'} percentage={'-5.23%'} size='small' />
+            <Card imageSrc={LitecoinLogo} number={'380.234'} chartData={smallChartLTCData} chartOptions={smallChartLTCOptions} currency={'LTC'} percentage={'+39.69%'} size='small' />
           </div>
           <div className="flex items-center gap-2 justify-between">
-            <LineChart height='20rem' width='55rem' data={chartData} options={chartOptions} /> 
+            <LineChart size='big' data={chartData} options={chartOptions} /> 
             <WalletActivity />
           </div>
 

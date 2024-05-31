@@ -3,6 +3,7 @@
 import BitcoinLogo from '../../assets/Bitcoin-Black-logo.png';
 import EthereumLogo from '../../assets/Ethereum-Logo.png'
 import LitecoinLogo from '../../assets/Litecoin-Logo.png'
+import { WalletItem } from '../WalletItem/WalletItem';
 
 const WalletActivity = () => {
   return (
@@ -13,38 +14,10 @@ const WalletActivity = () => {
           <span>History</span>
           <span>See All</span>
         </li>
-        <li className="flex items-center gap-2 text-xs mb-2">
-          <img className='w-4 h-4 object-contain' src={BitcoinLogo} alt="Bitcoin Logo" />
-          <div className='flex justify-between w-full gap-2'>
-            <span>From BTC Wallet Binance</span>
-            <span className="text-[#2b515a]">+$30,000</span>
-            <span>08/05/2024</span>
-          </div>
-        </li>
-        <li className="flex items-center gap-2 text-xs mb-2">
-          <img className='w-4 h-4 object-contain' src={EthereumLogo} alt="Ethereum Logo" />
-          <div className='flex justify-between w-full gap-2'>
-            <span>To Ether Blockchain</span>
-            <span className="text-[#9b3232]">-$5.23</span>
-            <span>07/26/2024</span>
-          </div> 
-        </li>
-        <li className="flex items-center gap-2 text-xs mb-2">
-          <img className='w-4 h-4 object-contain' src={LitecoinLogo} alt="Litecoin Logo" />
-          <div className='flex justify-between w-full gap-2'>
-            <span>From LiteCoin Wallet</span>
-            <span className="text-[#2b515a]">+$1,000</span>
-            <span>07/03/2024</span>
-          </div>
-        </li>
-        <li className="flex items-center gap-2 text-xs mb-2">
-          <img className='w-4 h-4 object-contain' src={BitcoinLogo} alt="Bitcoin Logo" />
-          <div className='flex justify-between w-full gap-2'>
-            <span>From BTC Wallet</span>
-            <span className="text-[#2b515a]">+$90</span>
-            <span>06/10/2024</span>
-          </div>
-        </li>
+        <WalletItem icon={BitcoinLogo} title='From BTC Wallet Binance' profit='+$30,000' date='08/05/2024' />
+        <WalletItem icon={EthereumLogo} title='To Ether Blockchain' profit='-5.93' date='08/05/2024' />
+        <WalletItem icon={LitecoinLogo} title='From LiteCoin Wallet' profit='+$1,000' date='07/03/2024' />
+        <WalletItem icon={BitcoinLogo} title='From BTC Wallet' profit='+$90' date='06/10/2024' />
       </ul>
     </div>
   );
