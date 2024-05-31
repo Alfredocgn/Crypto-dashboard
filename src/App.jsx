@@ -7,7 +7,7 @@ function App() {
 
 
   return (
-    <div className="flex h-screen bg-gradient-to-br from-[#1a2c4b] to-[#151229] ">
+    <div className="flex h-screen bg-gradient-to-tr from-[#182c47] to-[#151229] overflow-hidden ">
       <Sidebar />
       <Dashboard />
     </div>

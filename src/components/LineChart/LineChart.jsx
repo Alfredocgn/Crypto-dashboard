@@ -14,9 +14,9 @@ ChartJS.register(
 )
 
 // eslint-disable-next-line react/prop-types
-const LineChart = ({ data, options }) => {
+const LineChart = ({ data, options, width, height }) => {
   return (
-    <div className=" w-[60rem] h-[20rem]">
+    <div  style={{ width, height }} >
       <Line data={data} options={options} />
     </div>
   );
